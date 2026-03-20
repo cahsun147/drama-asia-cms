@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Asia - Content CMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glow-border {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3),
+                        0 0 40px rgba(168, 85, 247, 0.1),
+                        inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+        .neon-button {
+            background: linear-gradient(135deg, #ff0050 0%, #ff4485 100%);
+            box-shadow: 0 0 30px rgba(255, 0, 80, 0.5),
+                        0 0 60px rgba(255, 0, 80, 0.2);
+            transition: all 0.3s ease;
+        }
+        .neon-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(255, 0, 80, 0.7),
+                        0 0 80px rgba(255, 0, 80, 0.3);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .animated-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="animated-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="relative z-10">
+        <nav class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/logo.jpg" alt="Drama Asia Logo" class="w-10 h-10 object-cover rounded-lg">
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                        Drama Asia
+                    </h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Features</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 flex items-center justify-center min-h-[calc(100vh-200px)]">
+        <div class="container mx-auto px-6 text-center">
+            <div class="glass-card rounded-2xl p-12 glow-border max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mb-6">
+                        <i class="fas fa-video text-3xl text-white"></i>
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                        Drama Asia - Content CMS
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+                        Internal dashboard for automating and scheduling short drama video uploads. 
+                        Streamline your content workflow with our powerful automation tools.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <a href="#" class="neon-button inline-flex items-center space-x-3 px-8 py-4 rounded-full text-white font-semibold text-lg hover:scale-105 transform transition-all duration-300">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                        <span>Log in with TikTok</span>
+                    </a>
+                    
+                    <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Automated Scheduling</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Content Management</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>Analytics Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mt-16">
+                <div class="glass-card rounded-xl p-6 hover:scale-105 transform transition-all duration-300">
+                    <i class="fas fa-robot text-3xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Smart Automation</h3>
+                    <p class="text-gray-400">Intelligent content scheduling and automated publishing workflows</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 hover:scale-105 transform transition-all duration-300">
+                    <i class="fas fa-chart-line text-3xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Performance Analytics</h3>
+                    <p class="text-gray-400">Track engagement metrics and optimize content strategy</p>
+                </div>
+                <div class="glass-card rounded-xl p-6 hover:scale-105 transform transition-all duration-300">
+                    <i class="fas fa-shield-alt text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Secure Integration</h3>
+                    <p class="text-gray-400">Safe and reliable TikTok API integration for content publishing</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-white/10 mt-20">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="./assets/logo.jpg" alt="Drama Asia Logo" class="w-8 h-8 object-cover rounded-lg">
+                    <span class="text-lg font-semibold">Drama Asia</span>
+                </div>
+                <div class="flex space-x-6 text-sm">
+                    <a href="termsofservice.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                    <a href="privacypolicy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm mt-6">
+                © 2026 Drama Asia. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    </div>
+</body>
+</html>

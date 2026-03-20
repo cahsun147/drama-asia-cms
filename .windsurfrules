@@ -1,0 +1,11 @@
+# Project Context: Drama Asia Landing Page
+- **App Name:** Drama Asia
+- **Tech Stack:** HTML5, Tailwind CSS (via CDN), FontAwesome (via CDN for icons). No build tools like Node.js or Webpack.
+- **Goal:** Create a static website to pass TikTok API review for Content Posting API and Login Kit.
+- **Design System:** Dark mode, futuristic vibe, glassmorphism UI (using Tailwind's `backdrop-blur`, `bg-opacity`, border accents), glowing neon effects (using box-shadow/drop-shadow).
+
+# Rules
+1. **Consistency:** The name "Drama Asia" must be used exactly like this in all `<title>` tags, headers, footers, TOS, and Privacy Policy.
+2. **Entry Point:** The homepage MUST have a prominent "Log in with TikTok" button to satisfy reviewer requirements.
+3. **Responsive:** All pages must be fully responsive for mobile and desktop using Tailwind utility classes.
+4. **Navigation:** The footer of every page must contain working relative links to the Terms of Service and Privacy Policy.
