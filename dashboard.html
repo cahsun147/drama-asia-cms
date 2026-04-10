@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Asia - CMS Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glow-border {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3),
+                        0 0 40px rgba(168, 85, 247, 0.1),
+                        inset 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .animated-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .neon-publish {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.95) 0%, rgba(34, 211, 238, 0.95) 100%);
+            box-shadow: 0 0 24px rgba(34, 197, 94, 0.35),
+                        0 0 60px rgba(34, 211, 238, 0.18);
+            transition: all 0.3s ease;
+        }
+        .neon-publish:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 32px rgba(34, 197, 94, 0.5),
+                        0 0 80px rgba(34, 211, 238, 0.25);
+        }
+    </style>
+</head>
+<body class="animated-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="relative z-10">
+        <nav class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/logo.jpg" alt="Drama Asia Logo" class="w-10 h-10 object-cover rounded-lg">
+                    <div>
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                            Drama Asia
+                        </h1>
+                        <p class="text-xs text-gray-400">CMS Dashboard</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="index.html" class="glass-card px-5 py-2 rounded-full hover:scale-105 transform transition-all duration-300">
+                        <i class="fas fa-arrow-left mr-2"></i>Back to Home
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="relative z-10 container mx-auto px-6 pb-16">
+        <div class="max-w-5xl mx-auto">
+            <div class="mb-10 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                    Drama Asia - CMS Dashboard
+                </h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    Mockup demo for TikTok Content Posting API (Sandbox). Select a video and publish it to TikTok.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Upload Card -->
+                <section class="lg:col-span-2 glass-card rounded-2xl p-8 glow-border">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Upload Queue</h3>
+                            <p class="text-sm text-gray-400 mt-1">Choose a file and publish to TikTok Sandbox.</p>
+                        </div>
+                        <div class="glass-card rounded-xl px-4 py-2 text-sm text-gray-200">
+                            <i class="fas fa-plug-circle-check text-cyan-300 mr-2"></i>
+                            TikTok Connected
+                        </div>
+                    </div>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="glass-card rounded-xl p-5 border border-white/10">
+                            <div class="flex items-center justify-between gap-4 flex-wrap">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center">
+                                        <i class="fas fa-file-video text-pink-300 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">drama_episode_01.mp4</p>
+                                        <p class="text-sm text-gray-400">1080p • 00:58 • Mock file</p>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-400">
+                                    Status: <span class="text-gray-200">Ready</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass-card rounded-xl p-5 border border-white/10">
+                            <label class="block text-sm text-gray-300 mb-2">Video File (mock selector)</label>
+                            <div class="flex items-center gap-3 flex-wrap">
+                                <button type="button" class="glass-card px-4 py-2 rounded-lg border border-white/10 hover:border-white/20 transition-colors">
+                                    <i class="fas fa-folder-open mr-2 text-purple-300"></i>
+                                    Choose File
+                                </button>
+                                <div class="text-sm text-gray-400">
+                                    Selected: <span class="text-gray-200">drama_episode_01.mp4</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">This is a UI mockup for review purposes (no real upload from browser).</p>
+                        </div>
+
+                        <div class="glass-card rounded-xl p-5 border border-white/10">
+                            <label class="block text-sm text-gray-300 mb-2">Caption (mock)</label>
+                            <input value="Episode 1 - The Secret Meeting" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-pink-500/40" />
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">#DramaAsia</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">#ShortDrama</span>
+                                <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">#Episode1</span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                            <button id="publishBtn" type="button" class="neon-publish w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-full text-slate-950 font-semibold text-lg">
+                                <i class="fab fa-tiktok text-xl"></i>
+                                <span id="publishBtnText">Publish to TikTok</span>
+                            </button>
+
+                            <div id="statusArea" class="flex-1 min-h-[56px] rounded-2xl glass-card border border-white/10 px-5 py-4 text-sm text-gray-300 flex items-center">
+                                <span class="text-gray-400">Waiting for action…</span>
+                            </div>
+                        </div>
+
+                        <div id="successAlert" class="hidden mt-2 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 px-5 py-4 text-emerald-200">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-circle-check mt-0.5"></i>
+                                <div>
+                                    <p class="font-semibold">Success: Video successfully published to TikTok Sandbox!</p>
+                                    <p class="text-sm text-emerald-100/80 mt-1">Mock response for reviewer demo. No real video was uploaded from this UI.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Side Panel -->
+                <aside class="glass-card rounded-2xl p-8 glow-border">
+                    <h3 class="text-xl font-semibold">Publishing Details</h3>
+                    <p class="text-sm text-gray-400 mt-1">What the Content Posting API would do.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+                            <p class="text-sm text-gray-400">API</p>
+                            <p class="font-semibold">TikTok Content Posting API</p>
+                        </div>
+                        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+                            <p class="text-sm text-gray-400">Scope Requested</p>
+                            <p class="font-semibold">user.info.basic, video.upload</p>
+                        </div>
+                        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+                            <p class="text-sm text-gray-400">Target</p>
+                            <p class="font-semibold">TikTok Sandbox</p>
+                        </div>
+                        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+                            <p class="text-sm text-gray-400">Status</p>
+                            <p class="font-semibold" id="sideStatus">Idle</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="mt-10 text-center text-xs text-gray-500">
+                © 2026 Drama Asia. All rights reserved.
+            </div>
+        </div>
+    </main>
+
+    <!-- Background Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <script>
+        const publishBtn = document.getElementById('publishBtn');
+        const publishBtnText = document.getElementById('publishBtnText');
+        const statusArea = document.getElementById('statusArea');
+        const successAlert = document.getElementById('successAlert');
+        const sideStatus = document.getElementById('sideStatus');
+
+        let isUploading = false;
+
+        publishBtn.addEventListener('click', () => {
+            if (isUploading) return;
+
+            isUploading = true;
+            successAlert.classList.add('hidden');
+            publishBtn.setAttribute('disabled', 'disabled');
+            publishBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+            publishBtnText.textContent = 'Uploading...';
+            statusArea.innerHTML = '<span class="text-cyan-200"><i class="fas fa-spinner fa-spin mr-2"></i>Uploading video to TikTok Sandbox (mock)...</span>';
+            sideStatus.textContent = 'Uploading';
+
+            setTimeout(() => {
+                publishBtnText.textContent = 'Publish to TikTok';
+                statusArea.innerHTML = '<span class="text-emerald-200"><i class="fas fa-circle-check mr-2"></i>Upload complete (mock).</span>';
+                sideStatus.textContent = 'Published';
+
+                successAlert.classList.remove('hidden');
+
+                publishBtn.removeAttribute('disabled');
+                publishBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                isUploading = false;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
